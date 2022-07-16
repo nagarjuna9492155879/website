@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rajiv gandhi university of knowledge and technology</title>
+	<style type="text/css">
+		div.head{
+			background-color:white;
+			height: 50px;
+
+
+		}
+
+		ul
+		{
+			list-style-type: none
+
+		}
+		ul li{
+			float: left;
+			width: 250px;
+			height: 40px;
+			background-color:lightgreen;
+			font-size: 30px;
+			text-align: center;
+			z-index: 10;
+			
+		}
+		ul li a{
+			text-decoration: none;
+			color: black;
+			display: block;
+		}
+		ul li a:hover{
+			background-color: orange;
+			color: lightblue;
+		}
+		ul li ul li{
+			display: none;
+		}
+		ul li:hover ul li{
+			display: block;
+		}
+		.slider{
+			height: 500px;
+			width: 500px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			border: 5px solid rgb(33,174,230);
+			position:absolute;top: 20%; left:25%;
+			background-color: lightblue;
+
+		}
+		.slider_image{
+			width: 450px;
+			height: 450px;
+		}
+		.leftarrow{
+			position: relative;
+			right: 3%;
+			background-color: rgb(33,174,230);
+		}
+		.rightarrow{
+			position: relative;
+			right: -3%;
+			background-color: rgb(33,174,230);
+		}
+		.noti{
+			border: 2px solid blue;
+			position:absolute; 
+			right:5%;
+			top:  20%;
+			height: 400px;
+			width: 400px;
+			color: red;
+			font-size: 30px;
+			z-index: -1;
+			background-color: orange;
+
+		}
+		.not{
+			font-size: 40px;
+			border: 2px solid green;
+			background-color: yellow;
+		}
+		.no{
+			font-size: 30px;
+			color: red;
+
+		}
+		#myInput {
+  background-image: url('/css/searchicon.png'); 
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px; 
+  border: 1px solid #ddd; 
+  margin-bottom: 12px; 
+}
+
+#myTable {
+  border:red ;
+   width: 20%; 
+  border: 1px solid #ddd;
+  font-size: 18px; 
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px; 
+}
+
+#myTable tr {
+  
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+}
+.vc{
+	position: absolute;
+	bottom: 1%;
+	right: 10%
+}
+.n{
+	background-color: lightblue;
+}
+
+	.
+	</style>
+	<script type="text/javascript">
+		let slidernumber=1;
+		let maxslides=5;
+		let output=document.getElementById('output');
+		function previous(){
+			if (slidernumber>1) {
+			slidernumber-=1;
+			document.getElementById('output').src="image" +slidernumber+ ".png";
+		}}
+		function next(){
+			if (slidernumber<5) {
+			slidernumber+=1;
+			document.getElementById('output').src="image" +slidernumber+ ".png";
+		}}
+		function myFunction() {
+  
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+	</script>
+</head>
+<body style="background-color: pink">
+
+	<div class="head">
+	<header>
+		<h1 align="center">Rajiv Gandhi University Of Knowledge and Technology</h1>
+		<img src="-.jpg.png" height="50px" width="40px" alt="logo" style="top:3%; left: 18%; position: fixed" title="nagarjuna"></header>
+		
+	</header>
+	
+	</div>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Departments</a>
+			<ul>
+				<li><a href="#">CSE</a></li>
+				<li><a href="#">ECE</a></li>
+				<li><a href="#">MECH</a></li>
+				<li><a href="#">CIVIL</a></li>
+				<li><a href="#">EEE</a></li>
+				<li><a href="#">MME</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Adminstration</a>
+			<ul>
+				<li><a href="#">acadamics</a></li>
+				<li><a href="#">DSW</a></li>
+				<li><a href="#">sports</a></li>
+			</ul>
+
+		</li>
+		<li><a href="#">login</a>
+			<ul>
+				<li><a href="formvalidation.html">sign in</a></li>
+			</ul>	
+		</li>
+		<li><a href="#">Conatact us</a>
+			<ul>
+				<li>phno:9492155879</li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="slider">
+		<button class="leftarrow" onclick="previous()">&lt;</button>
+		<img src="image1.png" class="slider_image" id="output">
+		<button class="rightarrow"  onclick="next()">&gt;</button>
+	</div>
+	<div class="noti">
+		<h3 align="center" class="n">notifications</h3>
+		<marquee>
+		assign new assignment</marquee>
+		<marquee>
+		assign new assignment</marquee>
+		<marquee>
+		assign new assignment</marquee>
+		<marquee>
+		assign new assignment</marquee>
+			</div>
+	
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">ID</th>
+  </tr>
+  <tr>
+    <td>nagarjuna</td>
+    <td>181057</td>
+  </tr>
+  <tr>
+    <td>ravi</td>
+    <td>180023</td>
+  </tr>
+  <tr>
+    <td>charan</td>
+    <td>181053</td>
+  </tr>
+  <tr>
+    <td>jamsheer</td>
+    <td>181008</td>
+  </tr>
+</table>
+
+<div class="vc">
+	<div id="sfcdpbmd95dctm6j2fdcmcefh5zzmzr8wgs"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=dpbmd95dctm6j2fdcmcefh5zzmzr8wgs&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=dpbmd95dctm6j2fdcmcefh5zzmzr8wgs" border="0" title="free web counter" alt="free web counter"></a></noscript>
+	</div>
+
+
+</body>
+</html>
